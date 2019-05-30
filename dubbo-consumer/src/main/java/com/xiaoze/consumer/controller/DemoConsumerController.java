@@ -23,4 +23,13 @@ public class DemoConsumerController {
         return demoService.sayHello(name);
     }
 
+    @RequestMapping("/index")
+    public Object index(){
+        return "连接成功";
+    }
+
+    @RequestMapping("/detail")
+    public Object detail(Integer id){
+        return demoService.detail(id);
+    }
 }
